@@ -42,7 +42,8 @@ mvn verify
 * All the instanciation have been done via a Singleton - Factory pattern
 * The coffee could be enlarge with a Decorator pattern
 * Order and Voucher use together a Strategy pattern
-* Order is also an Iterable of Coffee
+* The computation of the price has been delegated
+* Coffees an Iterable of Coffee
 
 
 III) Installation of java
