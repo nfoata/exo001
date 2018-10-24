@@ -1,18 +1,23 @@
 package fr.foata.nicolas.challenges.coffee.model.impl;
 
+import fr.foata.nicolas.challenges.coffee.model.ICoffee;
 import fr.foata.nicolas.challenges.coffee.model.IOrder;
 import fr.foata.nicolas.challenges.coffee.model.IVoucher;
 
-public class VoucherTenPercent implements IVoucher {
+public class NoVoucher implements IVoucher {
 
 	@Override
 	public String getDescription() {
-		return "This voucher applies ten percent discount on the total.";
+		return "No Voucher";
 	}
 
 	@Override
 	public double calculateTotal( IOrder order ) {
-		return 0;
+		double total = 0.;
+		for( ICoffee coffee : order.getCoffees() ) {
+			total += coffee.costs();
+		}
+		return total;
 	}
 
 }
