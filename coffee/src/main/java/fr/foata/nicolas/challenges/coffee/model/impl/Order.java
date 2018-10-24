@@ -52,7 +52,7 @@ public class Order implements IOrder {
 	// Methods to be a IVoucheable
 	@Override
 	public boolean hasVoucher() {
-		return this.voucher != null;
+		return this.voucher != null && !(this.voucher instanceof NoVoucher);
 	}
 
 	@Override
