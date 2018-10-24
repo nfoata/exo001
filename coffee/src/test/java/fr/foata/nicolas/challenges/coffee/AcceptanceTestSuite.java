@@ -1,0 +1,5 @@
+package fr.foata.nicolas.challenges.coffee;
+
+import net.serenitybdd.jbehave.SerenityStories;
+
+public class AcceptanceTestSuite extends SerenityStories {}
